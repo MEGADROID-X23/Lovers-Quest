@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVER'S QUEST</title>
+    <link rel="stylesheet" href="./index style.css">
+</head>
+<body>
+    <div class="hero">
+
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="red.mp4" type="video/mp4">
+        </video>
+        
+        <nav>            
+        </nav>
+        <div class="content">
+            <h1>LOVER'S QUEST</h1>
+            <h2>Do you have what it takes?</h2>
+            <a href="Game.html">Let's find out</a>
+    <marquee behavior="smooth" direction="left"><h3>LOVER'S <span>QUEST</span></h3> - A Romantic and Adventure maze game designed by <span class="s1">Tochi 'MEGADROID' Nwadibia</span></marquee>
+
+        </div>
+    </div>
+
+    <script>
+        function playMusicOnEnterKeyPress() {
+          const music = new Audio("Careless Whisper_CBR_128k.mp3");
+          music.loop = true;
+          let isMusicPlaying = false;
+      
+          function toggleMusic() {
+            if (!isMusicPlaying) {
+              music.play();
+              isMusicPlaying = true;
+            } else {
+              music.pause();
+              isMusicPlaying = false;
+            }
+          }
+      
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+              toggleMusic();
+            }
+          });
+        }
+      
+        window.addEventListener("load", playMusicOnEnterKeyPress);
+      </script>
+      <!--Index home page-->
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOVER'S QUEST</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!--Code for background video-->
+  <video autoplay loop muted plays-inline class="back-video">
+    <source src="./red.mp4" type="video/mp4">
+</video>
+
+  <div id="page">
+
+    <!--Oncompletion message-->
+    <div id="Message-Container">
+      <div id="message">
+        <h1>Congrats!</h1>
+        <p>You found love</p>
+        <p id="moves"></p>
+        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Well Done!" />
+      </div>
+    </div>
+  <a href="./index.html">Home</a>
+    <!--Maze difficulty-->
+    <br>
+    <div id="menu">
+      <div class="custom-select">
+        <select id="diffSelect">
+                  <option value="10">She's waiting</option>
+                  <option value="15">Courtship</option>
+                  <option value="25">Hard to get</option>
+                  <option value="38">Forget about her</option>                                      
+              </select>
+      </div>
+      <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+    </div>
+    <!--Game container-->
+    <div id="view">
+      <div id="mazeContainer">
+        <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+      </div>
+    </div>
+
+    <p id="instructions">You have embarked on a treacherous quest to find true love. How many steps will you take to find it?</p>
+    <p class="p1">Use the <span class="s1">Arrow Keys</span> to move and the <span class="s1">Enter key</span> to toggle Soundtrack</p>
+    <marquee behavior="smooth" direction="left"><h3>LOVER'S <span>QUEST</span></h3> - A Romantic and Adventure maze game designed by <span class="s1">Tochi 'MEGADROID' Nwadibia</span></marquee>
+  </div>
+
+  <!--Ajax library for supporting maze generation. Online feature effective on first launch-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+
+  <!--JavaScript function for toggling in-game soundtrack-->
+  <script>
+    function playMusicOnEnterKeyPress() {
+      const music = new Audio("Otherworld Legends Vaporwave WM D6C In Game Ver_CBR_256k.mp3");
+      music.loop = true;
+      let isMusicPlaying = false;
+  
+      function toggleMusic() {
+        if (!isMusicPlaying) {
+          music.play();
+          isMusicPlaying = true;
+        } else {
+          music.pause();
+          isMusicPlaying = false;
+        }
+      }
+  
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          toggleMusic();
+        }
+      });
+    }
+  
+    window.addEventListener("load", playMusicOnEnterKeyPress);
+  </script>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
+
+<!--LOVER'S QUEST HTML structure with internal JavaScript function by Tochi 'MEGADROID' NWADIBIA-->
