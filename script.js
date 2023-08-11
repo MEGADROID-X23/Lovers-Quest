@@ -537,7 +537,7 @@ function rand(max) {
     };
   
     finishSprite = new Image();
-    finishSprite.src = "./2413437.svg"+   //Endpoint sprite
+    finishSprite.src = "./Clara.svg"+   //Endpoint sprite
     "?" +
     new Date().getTime();
     finishSprite.setAttribute("crossOrigin", " ");
@@ -549,7 +549,7 @@ function rand(max) {
     };
     
   };
-  //Resize and draw maze on change of difficulty functions
+  //Resize and draw the maze on change of difficulty selections
   window.onresize = function() {
     let viewWidth = $("#view").width();
     let viewHeight = $("#view").height();
