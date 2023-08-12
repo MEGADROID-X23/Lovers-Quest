@@ -567,6 +567,7 @@ function rand(max) {
     }
   };
   
+  // creates maze and player while setting opacity of maze container to 100
   function makeMaze() {
     if (player != undefined) {
       player.unbindKeyDown();
