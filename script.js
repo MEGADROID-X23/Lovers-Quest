@@ -4,12 +4,12 @@ function rand(max) {
   
   function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
+      const j = Math.floor(Math.random() * (i + 1));  //functions for random values generation with respect to maze lines
       [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
   }
-  
+  //changes brightness of sprite image by a specified factor
   function changeBrightness(factor, sprite) {
     var virtCanvas = document.createElement("canvas");
     virtCanvas.width = 500;
@@ -44,7 +44,7 @@ function rand(max) {
       document.getElementById(id).style.visibility = "visible";
     }
   }
-  
+  //code for maze width and height direction coordinates
   function Maze(Width, Height) {
     var mazeMap;
     var width = Width;
@@ -83,7 +83,7 @@ function rand(max) {
     this.endCoord = function() {
       return endCoord;
     };
-  
+  //generates maze map with coordinates
     function genMap() {
       mazeMap = new Array(height);
       for (y = 0; y < height; y++) {
@@ -567,7 +567,7 @@ function rand(max) {
     }
   };
   
-  // creates maze and player while setting opacity of maze container to 100
+  // creates maze wth respect to difficulty value and draws player while setting opacity of maze container to 100
   function makeMaze() {
     if (player != undefined) {
       player.unbindKeyDown();
