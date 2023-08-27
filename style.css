@@ -188,4 +188,12 @@ a:hover{
     border: 2px solid red;
 }
 
+#timer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 3rem;
+}
+
 /*--LOVER'S QUEST external styles by Tochi 'MEGADROID' Nwadibia--*/
